@@ -17,12 +17,11 @@ export class AppComponent implements OnInit {
       () => {console.log(`All done`)}
     )
 
-    const array = [
+    from([
       'Bob',
       'Joe',
       'Jim'
-    ]
-    from(array).subscribe(
+    ]).subscribe(
       item => {console.log(`Greetings, ${item}`)},
       err => {console.log(`Dang, I got an error: ${err}`)},
       () => {console.log('Done saying hello to everyone.')}
